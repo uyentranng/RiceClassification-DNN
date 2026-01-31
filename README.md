@@ -7,7 +7,7 @@ Data source: https://www.muratkoklu.com/datasets/
 The dataset consists of 75000 images of five rice varieties: Arborio, Basmati, Ipsala, Jasmine and Karacadag, 15000 from each varieties. A second feature dataset are then constructed, which includes 12 morphological, 4 shape factors and 90 color features (Feature Engineering).
 
 List of morphological features:
-|   |                    |   |                     |    |                     |   
+| Nr.|      Feature    | Nr.|      Feature         |Nr.|    Feature           |   
 |---| ------------------ |---| ------------------- |--- | ------------------- | 
 | 1 | Area               | 5 | Eccentricity        |  9 | Eccentricity        |
 | 2 | Perimeter          | 6 | Equivalent Diameter | 10 | Eccentricity        |
@@ -15,7 +15,7 @@ List of morphological features:
 | 4 | Minor Axis Length  | 8 | Convex Area         | 12 | Eccentricity        |
 
 List of shape factors:
-|   |                    |                                                              |   
+| Nr.|       Name        |                                                              |   
 |---| ------------------ |------------------------------------------------------------- | 
 | 1 | shape factor 1     | Major Axis Length / Area                                     |
 | 2 | shape factor 2     | Minor Axis Length / Area                                     |
