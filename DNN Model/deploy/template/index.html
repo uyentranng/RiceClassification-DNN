@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Rice Image Classifier
+        </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+
+    <body>
+    <div class="header">
+        <h1>Rice Image Classifier</h1>
+    </div>    
+
+    <div class="column">
+    <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+
+        <div class="upload">
+            <input type="file" name="img_file" id="img" hidden>
+            <label for="img" class="upload-btn">Upload Image</label>
+        </div>
+
+        <div class="submit-button">
+            <button type="submit" class="submit-btn">Submit</button>
+        </div>
+    </form>
+        <div class="upload-img">
+            {% if filename %}
+            <img src="{{ url_for('static', filename='uploads/' ~ filename) }}" height="400px" width="400px">
+            {% endif %}
+        </div>
+        
+        <div class="result">
+        {% if pred_class %}
+            <h2 class="class-label"><i>{{pred_prob}}% {{pred_class}}</i></h2>
+        {% endif %}
+        </div>
+    </div>
+    </body>
+</html>   
